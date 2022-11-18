@@ -24,7 +24,8 @@
     "rm": "rm -rf docs",
     "mv": "mv build docs",
     "git": "git add . && git commit && git push origin main",
-    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
+    "fixpath": "node modifyPathForBuild.js",
+    "deploy": "npm run rm && npm run build && npm run mv && npm run fixpath && npm run git"
   },
   "eslintConfig": {
     "extends": [
